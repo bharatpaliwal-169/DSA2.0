@@ -106,6 +106,30 @@ void pattern5(int &n){
 }
 
 
+// *****
+//  ***
+//   *
+void pattern6(int &n){
+  for(int i=n;i>0;i--){
+    for(int j=0;j<(n-i);j++){
+      cout << " ";
+    }
+
+    for(int j=0;j<(2*i) - 1;j++){
+      cout << "*";
+    }
+    for(int j=0;j<(n-i);j++){
+      cout << " ";
+    }
+    cout << nl;
+  }
+}
+
+// 5 + 6
+void pattern7(int &n){
+  pattern5(n);
+  pattern6(n);
+}
 
 int main(){
   int n; cin >> n;
@@ -114,8 +138,9 @@ int main(){
   // pattern2(n);
   // pattern3(n);
   // pattern4(n);
-  pattern5(n);
-
-
+  // pattern5(n);
+  // pattern6(n);
+  pattern7(n);
+  
   return 0;
 }
